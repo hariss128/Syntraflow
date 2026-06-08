@@ -1,0 +1,100 @@
+ .comparisonSection {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f7fb;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1120px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: #eceef2;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHighlight {
+  background: #1c86ff;
+  color: #ffffff;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+
+.iconCross,
+.iconCheck {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.iconCross {
+  background-color: transparent;
+  color: #2a2f38;
+  font-size: 1.1rem;
+}
+
+.cardHighlight .iconCheck {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.textBlock h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.textBlock p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.cardHighlight .textBlock p {
+  color: #e5f2ff;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+  }
+}
+

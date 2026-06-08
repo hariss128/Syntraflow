@@ -1,0 +1,4 @@
+.pageContent {
+  min-height: calc(100vh - 180px);
+  padding: 138px 24px 48px;
+}

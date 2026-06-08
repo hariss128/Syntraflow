@@ -1,0 +1,77 @@
+.topNavbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: min(1100px, calc(100% - 32px));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 9999px;
+  padding: 12px 48px;
+  box-shadow: -8px 10px 24px rgba(15, 23, 42, 0.12);
+}
+
+.navLeft,
+.navRight {
+  display: flex;
+  align-items: center;
+}
+
+.navLeft {
+  gap: 14px;
+}
+
+.navRight {
+  gap: 12px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111827;
+  margin-right: 6px;
+}
+
+.brandLogo {
+  border-radius: 9999px;
+}
+
+.brandName {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnLight {
+  background: #ffffff;
+  color: #111827;
+}
+
+.btnLogin {
+  background: #60a5fa;
+  color: #ffffff;
+}
+
+.btnOutline {
+  background: #ffffff;
+  color: #111827;
+  border-color: #111827;
+}

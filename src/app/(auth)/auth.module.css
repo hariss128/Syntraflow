@@ -1,0 +1,308 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  background: #ffffff;
+  padding: 24px 24px 24px 0;
+  box-sizing: border-box;
+}
+
+.leftPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+}
+
+.formContainer {
+  width: 100%;
+  max-width: 460px;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 24px;
+  border-radius: 999px;
+}
+
+.heading {
+  margin: 0;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.subheading {
+  margin: 10px auto 28px;
+  max-width: 380px;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 28px;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+.tabActive {
+  background: #eef5ff;
+  color: #1c86ff;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.input,
+.passwordWrap {
+  width: 100%;
+}
+
+.input {
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  color: #111827;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.passwordWrap {
+  position: relative;
+}
+
+.passwordWrap .input {
+  padding-right: 44px;
+}
+
+.togglePassword {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+}
+
+.forgotLink {
+  margin-top: -6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1c86ff;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  margin-top: 4px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #60a5fa;
+  color: #ffffff;
+  padding: 13px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: #3b82f6;
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #dc2626;
+}
+
+.success {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #16a34a;
+}
+
+.footerBlurb {
+  margin: 32px 0 0;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #9ca3af;
+}
+
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #f3f4f6;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  height: min(80vh, 720px);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+
+.slideActive {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slideImage {
+  object-fit: cover;
+}
+
+.slideOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
+  z-index: 2;
+}
+
+.slideIndicators {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.indicator {
+  height: 4px;
+  width: 32px;
+  border: none;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: background 200ms ease, width 200ms ease;
+}
+
+.indicatorActive {
+  background: #ffffff;
+  width: 48px;
+}
+
+.slideTitle {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.slideDescription {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 480px;
+}
+
+@media (max-width: 900px) {
+  .page {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .leftPanel {
+    min-height: auto;
+    padding: 32px 20px;
+  }
+
+  .rightPanel {
+    min-height: 360px;
+    padding: 0 20px 32px;
+  }
+
+  .slideshow {
+    height: 360px;
+  }
+
+  .fieldRow {
+    grid-template-columns: 1fr;
+  }
+}
