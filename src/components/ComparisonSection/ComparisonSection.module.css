@@ -21,6 +21,11 @@
   flex-direction: column;
 }
 
+.card:hover {
+  scale: 1.02;
+  transition: scale 0.8s ease;
+}
+
 .cardHighlight {
   background: #1c86ff;
   color: #ffffff;
