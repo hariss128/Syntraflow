@@ -5,6 +5,7 @@ import Image from 'next/image'
 import styles from './auth.module.css'
 import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
+import Link from 'next/link'
 
 const slides = [
   {
@@ -42,6 +43,7 @@ export default function AuthContainer() {
     <div className={styles.page}>
       <div className={styles.leftPanel}>
         <div className={styles.formContainer}>
+          <Link href="/">
           <Image
             src="/SyntraFlow-W400.png"
             alt="SyntraFlow logo"
@@ -49,7 +51,7 @@ export default function AuthContainer() {
             height={56}
             className={styles.logo}
           />
-
+          </Link>
           <h1 className={styles.heading}>
             {mode === 'login' ? 'Welcome to Syntraflow!' : 'Create your account'}
           </h1>
